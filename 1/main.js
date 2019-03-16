@@ -152,22 +152,52 @@ const x = 10;
     console.log(addNums(5,4));
 */
 
-// Constructor Function
-function Person(firstName, lastName, dob){
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.dob = new Date(dob);
-    // method
-    this.getBirthYear = function(){
+/*
+    // Constructor Function
+    function Person(firstName, lastName, dob){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+        // method
+        this.getBirthYear = function(){
+            return this.dob.getFullYear();
+        }
+        this.getFullName = function(){
+            return `${this.firstName} ${this.lastName}`;
+        }
+    }
+
+    Person.prototype.getBirthYear = function() {
         return this.dob.getFullYear();
     }
-    this.getFullName = function(){
+
+    Person.prototype.getFullName = function(){
         return `${this.firstName} ${this.lastName}`;
     }
 
-}
 
-// Instantiate object
-const person1 = new Person("Kevin", "Bui", "2-10-1996");
-console.log(person1.getBirthYear());
-console.log(person1.getFullName());
+    // class
+    class Person {
+        constructor(firstName, lastName, fob){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.dob = new Date(dob);
+        }
+
+        getBirthYear(){
+            return this.dob.getFullYear();
+        }
+
+        getFullName(){
+            return `${this.firstName} ${this.lastName}`;
+        }
+    }
+
+    // Instantiate object
+    const person1 = new Person("Kevin", "Bui", "2-10-1996");
+    const person2 = new Person("Helen", "Bui", "3-17-1996");
+    console.log(person1.getBirthYear());
+    console.log(person1.getFullName());
+    console.log(person1);
+*/
+
